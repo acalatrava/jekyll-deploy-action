@@ -19,6 +19,7 @@ echo "Deploying to https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git"
 REMOTE_REPO="https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git" && \
   #git config --global init.defaultBranch main && \
   #git init && \
+  git config --global http.postBuffer 157286400 && \
   git config user.name "${ACTOR}" && \
   git config user.email "${ACTOR}@users.noreply.github.com" && \
   git add . && \
