@@ -4,6 +4,7 @@ set -e
 # Get script directory
 SCRIPT_DIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 WORKING_DIR=${PWD}
+VERSION=v0.4.1
 
 # Initial default value
 PROVIDER=${INPUT_PROVIDER:=github}
