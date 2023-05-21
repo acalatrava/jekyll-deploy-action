@@ -113,6 +113,9 @@ build_jekyll() {
     -d ${WORKING_DIR}/build
 }
 
+REMOTE_REPO="https://${ACTOR}:${TOKEN}@github.com/${REPOSITORY}.git" && \
+  git clone -b $BRANCH $REMOTE_REPO ${WORKING_DIR}/build
+
 build_jekyll || {
   $CLEANUP_BUNDLER_CACHE_DONE && exit -1
   echo "Rebuild all gems and try to build again"
